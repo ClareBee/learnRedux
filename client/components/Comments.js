@@ -24,6 +24,8 @@ const Comments = React.createClass({
     const comment = this.refs.comment.value;
     //reference to actionCreator and dispatched to comments reducer
     this.props.addComment(postId, author, comment);
+    //empties out the form once you've submitted something
+    this.refs.commentForm.reset();
   },
   render(){
 
